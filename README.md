@@ -119,4 +119,5 @@ pd-scorecard/
 
 ## Tech Stack
 
-Python 3.12 | pandas | NumPy | scikit-learn | matplotlib | scipy | SQLite
+Python 3.12 | pandas | NumPy | scikit-learn | matplotlib | SQLite
+

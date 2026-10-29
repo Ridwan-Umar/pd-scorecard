@@ -23,7 +23,13 @@ cells.append(md_cell("# Probability of Default (PD) Scorecard\n## German Credit 
 
 # ── Step 1: Imports ──
 cells.append(md_cell("## Step 1: Setup & Imports"))
-cells.append(code_cell("""import pandas as pd
+cells.append(code_cell("""import os
+# Ensure we run from the project root regardless of where the notebook lives
+if os.path.basename(os.getcwd()) == 'notebooks':
+    os.chdir('..')
+print(f"Working directory: {os.getcwd()}")
+
+import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
@@ -264,3 +270,4 @@ with open('notebooks/pd_scorecard.ipynb', 'w', encoding='utf-8') as f:
     json.dump(notebook, f, indent=1, ensure_ascii=False)
 
 print("Notebook saved to notebooks/pd_scorecard.ipynb")
+

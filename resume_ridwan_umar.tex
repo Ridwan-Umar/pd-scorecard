@@ -1,0 +1,206 @@
+%-------------------------
+% Resume in Latex
+% Author : Ridwan Umar
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{0pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-2pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Ridwan Umar} \\ \vspace{1pt}
+    International Institute of Information Technology, Bangalore \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ 8882451901 ~ \href{mailto:Ridwan.Umar@iiitb.ac.in}{\raisebox{-0.2\height}\faEnvelope\  \underline{Ridwan.Umar@iiitb.ac.in}} ~
+    \href{https://www.linkedin.com/in/ridwan-umar-5b4540344/}{\raisebox{-0.2\height}\faLinkedin\ \underline{LinkedIn}}  ~
+    \href{https://github.com/Ridwan-Umar}{\raisebox{-0.2\height}\faGithub\ \underline{GitHub}}
+    \vspace{-4pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {International Institute of Information Technology, Bangalore}{Aug 2024 -- Jul 2028}
+      {Bachelor of Technology in Computer Science}{CGPA: 3.11 / 4.00}
+  \resumeSubHeadingListEnd
+\vspace{-12pt}
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements}
+    \resumeSubHeadingListStart
+        \resumeSubItem{\textbf{JEE Mains}: \textbf{99.51 percentile} (among \textbf{1.6+ million} candidates).}
+        \resumeSubItem{\textbf{Flipkart Gridlock 2.0} Hackathon: \textbf{Semi-finalist}.}
+        \resumeSubItem{\textbf{Klymo Ascent 1.0} Hackathon: Secured \textbf{Rank 8} (Top 10) with team `Works On My Machine'.}
+    \resumeSubHeadingListEnd
+\vspace{-12pt}
+
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading{\faGithub\ \href{https://github.com/Ridwan-Umar/pd-scorecard}{\textbf{Probability of Default (PD) Scorecard}} $|$ \emph{Python, pandas, scikit-learn, SQLite}}{Oct 2026}
+      \resumeItemListStart
+        \resumeSubItem{Built a \textbf{PD scorecard} on the UCI German Credit dataset (\textbf{1,000} applicants, \textbf{18 features}); applied \textbf{WoE binning} and \textbf{Information Value} to select \textbf{15 predictive features} (IV $\geq$ 0.02), dropping 3 with near-zero predictive power.}
+        \resumeSubItem{Trained a \textbf{logistic regression} PD model on WoE-transformed features; achieved test \textbf{AUC 0.77}, \textbf{Gini 0.54}, \textbf{KS 0.44}, with \textbf{PSI 0.05} confirming stable score distribution between train and test sets.}
+        \resumeSubItem{Loaded scored data into \textbf{SQLite} and wrote \textbf{4 analytical SQL queries} using \texttt{GROUP BY}, \texttt{CASE}, \textbf{CTEs}, and \textbf{window functions} (\texttt{RANK}, \texttt{NTILE}) to segment default rates by checking account status and loan purpose.}
+      \resumeItemListEnd
+        \vspace{-14pt}
+      \resumeProjectHeading{\faGithub\ \href{https://github.com/Ridwan-Umar/optimization-regression-analysis}{\textbf{Optimization \& Regression Analysis}} $|$ \emph{Python, NumPy, Matplotlib}}{Dec 2025 -- Jan 2026}
+      \resumeItemListStart
+        \resumeSubItem{Built \textbf{5 regression models from scratch} (no ML libraries) on \textbf{10,888} bike-sharing records across \textbf{11 features} with \textbf{80/20 train/test split} and \textbf{train-only standardization} to prevent data leakage; best model achieved test \textbf{R\textsuperscript{2} = 0.470}, up from \textbf{0.413} (linear baseline).}
+        \resumeSubItem{Implemented \textbf{3 optimization algorithms} -- Gradient Descent (Armijo backtracking), BFGS (quasi-Newton), and Trust-Region (Cauchy point) -- benchmarked on \textbf{3 CUTEst problems} (n $\geq$ 10) with \textbf{2 starting points} each.}
+        \resumeSubItem{BFGS achieved superlinear convergence in \textbf{14 iterations} vs.\ Gradient Descent's \textbf{1,000} on well-conditioned problems; Trust-Region proved most robust across all problem types.}
+      \resumeItemListEnd
+        \vspace{-14pt}
+
+      \resumeProjectHeading{\faGithub\ \href{https://github.com/Ridwan-Umar/multiplayer-quiz-engine}{\textbf{Multiplayer Quiz Engine}} $|$ \emph{C, POSIX, TCP Sockets, Linux}}{Apr 2026 -- May 2026}
+      \resumeItemListStart
+        \resumeSubItem{Built a real-time client-server quiz platform supporting up to \textbf{10 concurrent students} with \textbf{3 user roles} (Admin, Host, Student), live leaderboard updates, and per-question \textbf{15-second countdown} timers via SIGALRM.}
+        \resumeSubItem{Implemented concurrency using \textbf{pthreads} (1 thread per client), \textbf{3 mutex locks} for thread-safe operations, \textbf{fcntl file locks} on \textbf{3 data files}, and \textbf{POSIX semaphores} to enforce student capacity limits.}
+      \resumeItemListEnd
+        \vspace{-14pt}
+        \resumeProjectHeading{\faGithub\ \href{https://github.com/Ridwan-Umar/smartnotes}{\textbf{SmartNotes -- AI-Powered Note Taking App}} $|$ \emph{React, Node.js, Express, PostgreSQL, Redis}}{Jun 2026 -- Jul 2026}
+      \resumeItemListStart
+        \resumeSubItem{Built a full-stack note-taking platform with \textbf{JWT authentication}, \textbf{Redis caching}, and \textbf{BullMQ workers} for asynchronous AI task processing; \textbf{RESTful API} with \textbf{25+ endpoints}.}
+        \resumeSubItem{Integrated \textbf{Groq AI (Llama 3.3 70B)} for real-time \textbf{inline text suggestions}, automatic \textbf{tag generation}, and \textbf{note summarization}; implemented \textbf{markdown editor} with live preview and \textbf{PDF export}.}
+      \resumeItemListEnd
+
+
+    \resumeSubHeadingListEnd
+\vspace{-10pt}
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C, C++, JavaScript, Java, SQL} \\
+     \textbf{Technologies}{: Linux, Git, Node.js, Express.js, React, PostgreSQL, Redis, NumPy, Matplotlib} \\
+
+     \textbf{Tools}{: VS Code, Postman, WSL, Make, GDB, Jupyter} \\
+    }}
+ \end{itemize}
+ \vspace{-6pt}
+
+
+%------RELEVANT COURSEWORK-------
+\section{Relevant Coursework}
+    \begin{multicols}{3}
+        \begin{itemize}[itemsep=-2pt, parsep=1pt]
+            \item\small Data Structures \& Algorithms
+            \item\small Database Systems
+            \item\small Operating Systems
+            \item\small Computer Networks
+            \item\small Object-Oriented Programming
+            \item\small Optimization
+            \item\small Computer Architecture
+            \item\small Signals and Systems
+        \end{itemize}
+    \end{multicols}
+    \vspace{-2pt}
+
+
+%-----------EXTRACURRICULAR-----------
+\section{Extracurricular Activities}
+    \resumeSubHeadingListStart
+        \resumeSubItem{\textbf{Synergy, IIIT Bangalore}: Actively assisted in the management and organization of campus events.}
+    \resumeSubHeadingListEnd
+
+\end{document}
+
